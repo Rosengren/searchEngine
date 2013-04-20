@@ -6,6 +6,9 @@ from searchData import searchData
 from homeLink import homeLink
 from pageLink import pageLink
 
+# storeData accepts any page (HomeLinke or pageLink) and handles duplicates
+# and increments pageCounts.
+
 class storeData:
 
 	siteData = searchData()

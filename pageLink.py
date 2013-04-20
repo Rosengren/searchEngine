@@ -6,7 +6,7 @@ class pageLink:
 	pageURL = ""
 	pageTags = []
 
-	def __init__(self, url):
+	def __init__(self, url, pageTags):
 		self.pageCount = 1
 		self.pageURL = url
 

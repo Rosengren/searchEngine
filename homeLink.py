@@ -36,7 +36,7 @@ class homeLink:
 		else:
 			self.pageLinks[pageURL] = page
 
-		addTag(pageTags)
+		linkTags.append(pageTags)
 
 	# def incPage(self, page):
 	# 	if page.getURL() in self.pageLinks:
