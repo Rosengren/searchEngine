@@ -1,7 +1,6 @@
 from pageLink import pageLink
 
 # Homelink containing subpages
-
 class homeLink:
 
 	linkCount = 0
@@ -36,7 +35,7 @@ class homeLink:
 		else:
 			self.pageLinks[pageURL] = page
 
-		linkTags.append(pageTags)
+		self.linkTags.append(pageTags)
 
 	# def incPage(self, page):
 	# 	if page.getURL() in self.pageLinks:
