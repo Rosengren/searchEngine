@@ -10,9 +10,6 @@ stores all homeLinks and related pageLinks in dictionary
 
 class storeData:
 
-	""" contains homeLinks """
-	webBase = {}
-
 	def __init__(self):
 		self.webBase = {}
 
