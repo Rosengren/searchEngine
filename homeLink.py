@@ -1,6 +1,13 @@
 from pageLink import pageLink
 
-# Homelink containing subpages
+"""
+homeLink
+object containing URL of homepage & holds all subpages within a
+dictionary
+
+version 1.0.1 Kevin Rosengren
+"""
+
 class homeLink:
 
 	def __init__(self, url):
@@ -20,6 +27,13 @@ class homeLink:
 
 	def getPageLinks(self):
 		return self.pageLinks
+
+	def getPageLink(self, pageURL):
+
+		if pageURL in self.pageLinks:
+			return self.pageLinks[pageURL]
+
+		return None
 
 	def incCount(self):
 		self.linkCount += 1
@@ -47,4 +61,3 @@ class homeLink:
 		
 		# add Tags to homeLink
 		self.addTags(pageTags)
-

@@ -1,4 +1,11 @@
-# subpage
+
+"""
+pageLink
+subPage object containing the URL, page count, and page getTags
+of a single sub page
+
+Version 1.0.0 Kevin Rosengren
+"""
 
 class pageLink:
 
