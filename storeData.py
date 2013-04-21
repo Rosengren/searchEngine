@@ -15,8 +15,14 @@ class storeData:
 
 
 	def addPage(self, pageURL, pageTags):
-		page = pageURL.split(pageURL.split(".com/")[1])[0]
 
+		try:
+			page = pageURL.split(pageURL.split(".com/")[1])[0]
+		except Exception, e:
+			page = pageURL
+
+		#page = pageURL.split(pageURL.split(".com/")[1])[0]
+		
 		# if homeLink already in webBase, add new page
 		if page in self.webBase:
 			self.webBase[page].addPage(pageURL, pageTags)
@@ -69,5 +75,16 @@ class storeData:
 	def getSearchData(self):
 
 		return self.webBase
+
+
+	def searchData(self, keyword):
+
+		for home in self.webBase:
+
+			if keyword in self.webBase[home].getTags():
+				print self.webBase[home].getURL()
+				print "-----------------------"
+				self.webBase[home].searchPages(keyword)
+
 
 

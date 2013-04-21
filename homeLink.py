@@ -61,3 +61,11 @@ class homeLink:
 		
 		# add Tags to homeLink
 		self.addTags(pageTags)
+
+	def searchPages(self, keyword):
+
+		for page in self.pageLinks:
+
+			if keyword in self.pageLinks[page].getTags():
+
+				print "\t" + self.pageLinks[page].getURL()

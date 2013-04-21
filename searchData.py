@@ -1,49 +1,35 @@
-from homeLink import homeLink
+import sys
 
-# Database containing all homeLinks
+from storeData import storeData
+from dummyData import dummyData
 
-class storeData:
+"""
+searchData
+prompts user to search internet
+returns relevant websites
 
-	webBase = {}
+Version 1.0.0 Kevin Rosengren
+
+-- NEED TO IMPLEMENT WEIGHTED SEARCH --
+-- ALLOW FOR MULTIPLE KEYWORD INPUTS --
+"""
+
+
+class searchData:
+
 	def __init__(self):
-		self.webBase = {}
+		self.data = dummyData()
+		self.stData = dummyData().getDummyData()
+		search = None
+		print self.stData.
 
-	def addLink(self, link):
+		while (search != "q"):
 
-		if link.getURL() not in self.webBase:
-			self.webBase[link.getURL()] = link
-			return 1
+			# prompt user with search term
+			search = raw_input("Search data (only one keyword): ")
+			self.stData.searchData(search)
 
-		return 0
+		pass
 
-	def getLink(self, homeURL):
-
-		if homeURL in self.webBase:
-			return self.webBase[homeURL]
-
-		return None
-
-	def containsURL(self, page):
-		if page in self.webBase:
-			return True
-		
-		return False
-
-	def getSearchData(self):
-
-		return self.webBase
-
-	def addPage(self, pageURL, pageTags):
-		page = pageURL.split(pageURL.split(".com/")[1])[0]
-
-		if page in self.webBase:
-			self.webBase[page].addPage(pageURL, pageTags)
-			return True
-		else:
-			newLink = homeLink(page)
-			self.webBase[page] = newLink
-			self.webBase[page].addPage(pageURL, pageTags)
-			return True
-
-		return False
-
+if __name__ == '__main__':
+	searchData()

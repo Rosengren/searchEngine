@@ -16,11 +16,6 @@ def main():
 	print stData.getSearchData()
 	homeL = stData.getLink("http://www.google.com/")
 	print homeL.getPageLinks()
-	# print urlData.getLink("http://www.google.com").getURL()
-	# pageURL = "http://www.google.com/avengers"
-	# page = pageURL.split(".com/")[1]
-	# page = pageURL.split(pageURL.split(".com/")[1])[0]
-	# print page	
 	pass
 
 if __name__ == '__main__':
